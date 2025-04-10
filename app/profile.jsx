@@ -2,12 +2,12 @@ import { TouchableOpacity, View, Text, StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
-export default function HomeScreen() {
+export default function SobreScreen() {
     const navigation = useNavigation();
 
     return (
         <View style={styles.container}>
-            
+
             <View style={styles.header}>
                 <TouchableOpacity onPress={() => navigation.openDrawer()} style={styles.menuButton}>
                     <Ionicons name="menu" size={24} color="#fff" />
@@ -17,7 +17,7 @@ export default function HomeScreen() {
 
             <View style={styles.content}>
                 <Text style={styles.welcomeText}>Seja bem-vindo!</Text>
-                <Text style={styles.subtitle}>Aqui temos a tela Home</Text>
+                <Text style={styles.subtitle}>Aqui temos a tela Sobre</Text>
             </View>
 
         </View>
