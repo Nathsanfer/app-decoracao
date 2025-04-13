@@ -1,6 +1,7 @@
-import { TouchableOpacity, View, Text, StyleSheet, TextInput, Button, Alert } from "react-native";
+import { View, Text, StyleSheet, TextInput, Button, Alert } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import Ionicons from "react-native-vector-icons/Ionicons";
+import HeaderComponent from "../components/header.module.jsx";
+
 
 export default function ContactScreen() {
     const navigation = useNavigation();
@@ -11,13 +12,8 @@ export default function ContactScreen() {
 
     return (
         <View style={styles.container}>
-            
-            <View style={styles.header}>
-                <TouchableOpacity onPress={() => navigation.openDrawer()} style={styles.menuButton}>
-                    <Ionicons name="menu" size={24} color="#fff" />
-                </TouchableOpacity>
-                <Text style={styles.headerTitle}>SENAI</Text>
-            </View>
+
+            <HeaderComponent />
 
             <View style={styles.content}>
                 <Text style={styles.welcomeText}>Entre em Contato</Text>
@@ -58,16 +54,24 @@ const styles = StyleSheet.create({
         height: 60,
         flexDirection: "row",
         alignItems: "center",
+        justifyContent: "space-between",
         paddingHorizontal: 15,
         elevation: 4,
-    },
-    menuButton: {
-        marginRight: 15,
     },
     headerTitle: {
         color: "#fff",
         fontSize: 20,
         fontWeight: "bold",
+    },
+    headerRight: {
+        flexDirection: "row",
+        alignItems: "center",
+    },
+    cartButton: {
+        marginRight: 15,
+    },
+    menuButton: {
+        marginLeft: 5,
     },
     content: {
         flex: 1,
@@ -99,15 +103,5 @@ const styles = StyleSheet.create({
     textArea: {
         height: 100,
         textAlignVertical: "top",
-    },
-    footer: {
-        backgroundColor: "#3a5a40",
-        height: 50,
-        justifyContent: "center",
-        alignItems: "center",
-    },
-    footerText: {
-        color: "#fff",
-        fontSize: 14,
     },
 });

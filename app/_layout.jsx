@@ -50,6 +50,18 @@ export default function Layout({ }) {
                         ),
                     }} />
 
+                <Drawer.Screen name="counter"
+                    options={{
+                        title: "Contador",
+                        drawerLabel: "Contador",
+                        
+                        headerShown: false,
+                        headerLeft: true,
+                        drawerIcon: ({ size, color }) => (
+                            <Ionicons name="call" size={size} color={color} />
+                        ),
+                    }} />
+
             </Drawer>
 
         </GestureHandlerRootView>
