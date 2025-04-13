@@ -1,14 +1,29 @@
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, ScrollView } from "react-native";
 import HeaderComponent from "../components/header.module.jsx";
+import SectionCards from "../components/sectionCards.module.jsx";
+import CarouselComponent from "../components/carousel.module.jsx";
 
-export default function SobreScreen() {
+// Array para armazenar os slides do carrossel
+const slides = [
+    {
+        image: { uri: 'https://decoracaobrasil.com/wp-content/uploads/2021/11/te%CC%81cnicas-para-decorar-a-casa.png' }
+    },
+    {
+        image: { uri: 'https://www.datocms-assets.com/29255/1708110325-decoracao-de-sala-simples.jpg' }
+    }
+];
 
+
+
+export default function SobreScreen({}) {
     return (
-        <View style={styles.container}>
-
+        <ScrollView style={styles.container}>
             <HeaderComponent />
             
-        </View>
+            <CarouselComponent slides={slides} />
+            
+            
+        </ScrollView>
     );
 }
 
