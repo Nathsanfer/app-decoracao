@@ -38,8 +38,8 @@ const styles = StyleSheet.create({
     },
     titleText: {
         fontSize: 24,
-        color: '#ada584',
-        fontWeight: '300',
+        color: '#3a5a40',
+        fontWeight: '350',
         marginBottom: 16,
         letterSpacing: 1,
     },

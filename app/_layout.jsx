@@ -54,11 +54,23 @@ export default function Layout({ }) {
                     options={{
                         title: "Contador",
                         drawerLabel: "Contador",
-                        
+
                         headerShown: false,
                         headerLeft: true,
                         drawerIcon: ({ size, color }) => (
-                            <Ionicons name="call" size={size} color={color} />
+                            <Ionicons name="calculator" size={size} color={color} />
+                        ),
+                    }} />
+
+                <Drawer.Screen name="categories"
+                    options={{
+                        title: "Categorias",
+                        drawerLabel: "Categorias",
+
+                        headerShown: false,
+                        headerLeft: true,
+                        drawerIcon: ({ size, color }) => (
+                            <Ionicons name="grid" size={size} color={color} />
                         ),
                     }} />
 

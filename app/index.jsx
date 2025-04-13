@@ -1,5 +1,4 @@
-import { ScrollView
-    , StyleSheet } from "react-native";
+import { ScrollView, StyleSheet } from "react-native";
 import HeaderComponent from "../components/header.module";
 import CarouselComponent from "../components/carousel.module";
 import SectionCards from "../components/sectionCards.module";
