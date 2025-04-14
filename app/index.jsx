@@ -17,13 +17,14 @@ const slides = [
 ];
 
 // Dados dos produtos
-const produtos = [
+const oportunidades = [
     {
         id: 1,
-        imageUri: 'https://panoverse-cdn.com.br/img.panorama/produto/81706/cristaleira-roma-2-portas-1-gaveta-imbuia-rodmoveis-550112-large.jpg',
-        descricao: 'Cristaleira com 2 portas e 1 gaveta',
-        preco: 'R$ 546,89/un.',
-        desconto: '30% de desconto'
+        imageUri: 'https://static.mobly.com.br/p/XFlex-SofC3A1s-SofC3A1-Connect-Premium-22C00m-Assento-RetrC3A1til2FReclinC3A1vel-com-porta-copos-e-entrada-USB-Suede-Capuccino-5245-7690021-1.jpg',
+        descricao: 'Sófa retrátil e reclinável com molas',
+        preco: 'R$ 1.999,00/un.',
+        desconto: '30% de desconto',
+        linkPage: '/pageProduct'
     },
     {
         id: 2,
@@ -31,16 +32,26 @@ const produtos = [
         descricao: 'Escrivaninha com estante office com 3 gavetas',
         preco: 'R$ 319,99/un.',
         desconto: '25% de desconto'
-    },
-    {
-        id: 3,
-        imageUri: 'https://madeiramadeira.com.br/images/product/2022/01/armario-multiuso-2-portas-demobile-branco-17656930-60053-1_zoom-m.jpg',
-        descricao: 'Armário multiuso 2 portas',
-        preco: 'R$ 289,90/un.',
-        desconto: '20% de desconto'
     }
 ];
 
+const destaques = [
+    {
+        id: 1,
+        imageUri: 'https://panoverse-cdn.com.br/img.panorama/produto/81706/cristaleira-roma-2-portas-1-gaveta-imbuia-rodmoveis-550112-large.jpg',
+        descricao: 'Cristaleira com 2 portas e 1 gaveta',
+        preco: 'R$ 546,89/un.',
+        desconto: '40% de desconto'
+    },
+    {
+        id: 2,
+        imageUri: 'https://cdn.leroymerlin.com.br/products/armario_para_cozinha_pequena_6_portas_1_gaveta_120_cm_freijo_1571902064_a967_600x600.jpg',
+        descricao: 'Armário médio com gavetas',
+        preco: 'R$ 859,00/un.',
+        desconto: '15% de desconto'
+    }
+];
+  
 export default function HomeScreen() {
 
     return (
@@ -53,13 +64,13 @@ export default function HomeScreen() {
             <SectionCards
                 subtitle="veja mais"
                 title="OPORTUNIDADES"
-                produtos={produtos}
+                produtos={oportunidades}
             />
             
             <SectionCards
                 subtitle="veja mais" 
                 title="DESTAQUES"
-                produtos={produtos}
+                produtos={destaques}
             />
 
         </ScrollView>

@@ -74,6 +74,18 @@ export default function Layout({ }) {
                         ),
                     }} />
 
+                <Drawer.Screen name="pageProduct"
+                    options={{
+                        title: "Produto",
+                        headerShown: false,
+                        drawerLabel: "Produto",
+                        drawerIcon: ({ size, color }) => (
+                            <Ionicons name="cube" size={size} color={color} />
+                        ),
+                        drawerItemStyle: { display: 'none' }
+                    }}
+                />
+
             </Drawer>
 
         </GestureHandlerRootView>

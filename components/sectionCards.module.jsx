@@ -15,6 +15,7 @@ export default function SectionCards({ subtitle, title, produtos }) {
                         descricao={produto.descricao}
                         preco={produto.preco}
                         desconto={produto.desconto}
+                        linkPage={produto.linkPage}
                     />
                 ))}
             </View>

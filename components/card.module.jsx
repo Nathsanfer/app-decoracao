@@ -1,21 +1,23 @@
 import { View, Text, Image } from 'react-native';
 
-export default function CardComponent({ imageUri, descricao, preco, desconto }) {
+export default function CardComponent({ imageUri, descricao, preco, desconto, linkPage }) {
     return (
         <View style={styles.card}>
-            <Image
-                source={{ uri: imageUri }}
-                style={styles.cardImage}
-            />
-            <View style={styles.cardContent}>
-                <Text style={styles.cardDescription}>{descricao}</Text>
-                <View style={styles.priceContainer}>
-                    <Text style={styles.discountedPrice}>{preco}</Text>
+            <a href={linkPage}>
+                <Image
+                    source={{ uri: imageUri }}
+                    style={styles.cardImage}
+                />
+                <View style={styles.cardContent}>
+                    <Text style={styles.cardDescription}>{descricao}</Text>
+                    <View style={styles.priceContainer}>
+                        <Text style={styles.discountedPrice}>{preco}</Text>
+                    </View>
+                    <View style={styles.discountTag}>
+                        <Text style={styles.discountText}>{desconto}</Text>
+                    </View>
                 </View>
-                <View style={styles.discountTag}>
-                    <Text style={styles.discountText}>{desconto}</Text>
-                </View>
-            </View>
+            </a>
         </View>
     );
 }

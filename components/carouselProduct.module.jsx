@@ -5,7 +5,7 @@ import { useRef, useState, useEffect } from 'react';
 // Variável é usada para obter a largura da tela do dispositivo, para que possamos definir a largura dos slides do carrossel.
 const { width } = Dimensions.get('window');
 
-export default function CarouselComponent({slides}) {
+export default function CarouselProductComponent({slides}) {
 
     // Variável usada para rolar o carrossel.
         const scrollRef = useRef(null);
@@ -35,25 +35,7 @@ export default function CarouselComponent({slides}) {
                 setCurrentIndex(index);
             }
         };
-    
-        /*
-        O código cria um autoplay no carrossel:
-            - A cada 3 segundos, avança para o próximo slide.
-            - Se estiver no último, volta pro primeiro.
-            - Usa a função goToSlide para trocar o slide.
-            - Reinicia o timer sempre que currentIndex ou autoplay mudar.
-            - Limpa o timer quando o componente desmonta para evitar bugs.
-        */
-        useEffect(() => {
-            let timer;
-            if (autoplay) {
-                timer = setInterval(() => {
-                    const nextIndex = currentIndex === slides.length - 1 ? 0 : currentIndex + 1;
-                    goToSlide(nextIndex);
-                }, autoplayInterval);
-            }
-            return () => clearInterval(timer);
-        }, [currentIndex, autoplay]);
+        
 
         return (
 
