@@ -29,8 +29,10 @@ export default function SectionCards({ subtitle, title, produtos }) {
 
 const styles = StyleSheet.create({
     container: {
-        padding: 16,
+        marginHorizontal: 15,
+        marginVertical: 15,
         backgroundColor: '#f9f7f1',
+        
     },
     seeMore: {
         fontSize: 14,

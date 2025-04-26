@@ -24,7 +24,7 @@ const oportunidades = [
         descricao: 'Sófa retrátil e reclinável com molas',
         preco: 'R$ 1.999,00/un.',
         desconto: '30% de desconto',
-        linkPage: '/pageProduct'
+        linkPage: 'pageProduct'
     },
     {
         id: 2,

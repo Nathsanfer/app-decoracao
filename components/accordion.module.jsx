@@ -13,7 +13,7 @@ export default function Accordion({ title, content}) {
 
                 <Text style={styles.accordionTitle}>{title}</Text>
                 <Ionicons name={isExpanded ? "chevron-up" : "chevron-down"} size={20} color="#3a5a40" />
-
+                
             </TouchableOpacity>
 
             {isExpanded && (
@@ -58,5 +58,5 @@ const styles = StyleSheet.create({
         color: '#000',
         fontWeight: '380',
         letterSpacing: 0.5
-    },
+    }
 })

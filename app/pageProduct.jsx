@@ -2,6 +2,8 @@ import { Text, View, StyleSheet, ScrollView, TouchableOpacity } from "react-nati
 import HeaderComponent from "../components/header.module.jsx";
 import CarouselProductComponent from "../components/carouselProduct.module.jsx";
 import Accordion from "../components/accordion.module.jsx";
+import AccordionAssessment from "../components/accordionAssessment.module.jsx";
+import SectionCards from "../components/sectionCards.module.jsx";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
 const slides = [
@@ -19,6 +21,23 @@ const slides = [
     },
     {
         image: { uri: 'https://static.mobly.com.br/p/XFlex-SofC3A1s-SofC3A1-Connect-Premium-22C00m-Assento-RetrC3A1til2FReclinC3A1vel-com-porta-copos-e-entrada-USB-Suede-Capuccino-5252-7690021-7.jpg' }
+    }
+];
+
+const oportunidades = [
+    {
+        id: 1,
+        imageUri: 'https://static.mobly.com.br/p/XFlex-SofC3A1s-SofC3A1-Connect-Premium-22C00m-Assento-RetrC3A1til2FReclinC3A1vel-com-porta-copos-e-entrada-USB-Suede-Capuccino-5245-7690021-1.jpg',
+        descricao: 'Sófa retrátil e reclinável com molas',
+        preco: 'R$ 1.999,00/un.',
+        desconto: '30% de desconto'
+    },
+    {
+        id: 2,
+        imageUri: 'https://static.stealthelook.com.br/wp-content/uploads/2022/01/maneiras-praticas-para-organizar-e-decorar-a-escrivaninha-mini-gaveteiro-20220127202610.jpg',
+        descricao: 'Escrivaninha com estante office com 3 gavetas',
+        preco: 'R$ 319,99/un.',
+        desconto: '25% de desconto'
     }
 ];
 
@@ -74,41 +93,49 @@ export default function SobreScreen() {
             </View>
 
             <View style={styles.containerButton}>
-            <View style={styles.containerQuantity}>
-                <Text style={styles.text1}>Quantidade: 1</Text>
-                <Text style={styles.text2}>50 disponíveis</Text>
-                <Ionicons name="chevron-forward" size={18} color="#3a5a40" />
-            </View>
+                <View style={styles.containerQuantity}>
+                    <Text style={styles.text1}>Quantidade: 1</Text>
+                    <Text style={styles.text2}>50 disponíveis</Text>
+                    <Ionicons name="chevron-forward" size={18} color="#3a5a40" />
+                </View>
 
-            <TouchableOpacity style={styles.button}>
-                <Text style={styles.text3}>ADICIONAR NO CARRINHO</Text>
-            </TouchableOpacity>
+                <TouchableOpacity style={styles.button}>
+                    <Text style={styles.text3}>ADICIONAR NO CARRINHO</Text>
+                </TouchableOpacity>
             </View>
 
             <View style={styles.divisor}></View>
 
-            <Accordion title="Descrição do produto" 
-            content={
-                <View>
-        
-                    <Text style={{ fontSize: 14, color: "#555", marginBottom: 8 }}>
-                    O Sofá Connect Premium é a peça que faltava para transformar sua sala de estar em um oásis de conforto e elegância. Este produto excepcional, produzido pela renomada marca XFLEX SOFÁS, combina estilo contemporâneo com funcionalidade excepcional, proporcionando momentos inesquecíveis de relaxamento e entretenimento.
-                    </Text>
-
-                    <Text style={{ fontSize: 14, color: "#555", marginBottom: 8 }}>
-                    Especificações Técnicas:                    
-                    </Text>
-        
+            <Accordion title="Descrição do produto"
+                content={
                     <View>
-                        <Text style={{ fontSize: 14, color: "#555", marginBottom: 4 }}>• Sofá retrátil e reclinável</Text>
-                        <Text style={{ fontSize: 14, color: "#555", marginBottom: 4 }}>• Inclui porta-copos</Text>
-                        <Text style={{ fontSize: 14, color: "#555", marginBottom: 4 }}>• Entrada USB integrada</Text>
-                        <Text style={{ fontSize: 14, color: "#555", marginBottom: 4 }}>• Material: Suede</Text>
-                        <Text style={{ fontSize: 14, color: "#555", marginBottom: 4 }}>• Cor: Capuccino</Text>
+
+                        <Text style={{ fontSize: 14, color: "#555", marginBottom: 8 }}>
+                            O Sofá Connect Premium é a peça que faltava para transformar sua sala de estar em um oásis de conforto e elegância. Este produto excepcional, produzido pela renomada marca XFLEX SOFÁS, combina estilo contemporâneo com funcionalidade excepcional, proporcionando momentos inesquecíveis de relaxamento e entretenimento.
+                        </Text>
+
+                        <Text style={{ fontSize: 14, color: "#555", marginBottom: 8 }}>
+                            Especificações Técnicas:
+                        </Text>
+
+                        <View>
+                            <Text style={{ fontSize: 14, color: "#555", marginBottom: 4 }}>• Sofá retrátil e reclinável</Text>
+                            <Text style={{ fontSize: 14, color: "#555", marginBottom: 4 }}>• Inclui porta-copos</Text>
+                            <Text style={{ fontSize: 14, color: "#555", marginBottom: 4 }}>• Entrada USB integrada</Text>
+                            <Text style={{ fontSize: 14, color: "#555", marginBottom: 4 }}>• Material: Suede</Text>
+                            <Text style={{ fontSize: 14, color: "#555", marginBottom: 4 }}>• Cor: Capuccino</Text>
+                        </View>
                     </View>
-                </View>
-            }
-            />
+                } />
+
+            <View style={styles.divisor}></View>
+
+            <AccordionAssessment />
+
+            <View style={styles.divisor}></View>
+
+            <SectionCards subtitle="veja mais"
+                title="SEMELHANTES" produtos={oportunidades} />
 
         </ScrollView>
     );
@@ -117,6 +144,7 @@ export default function SobreScreen() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: '#f9f7f1'
     },
     titleText: {
         fontSize: 24,
@@ -219,6 +247,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         justifyContent: 'center',
         alignItems: 'center',
+        marginVertical: 10,
     },
     text3: {
         color: '#fff',
@@ -226,8 +255,8 @@ const styles = StyleSheet.create({
     },
     divisor: {
         width: '100%',
-        height: 0.1,
+        height: 1.4,
         backgroundColor: '#3a5a40',
-        marginTop: 30 ,
+        marginTop: 10,
     }
 });

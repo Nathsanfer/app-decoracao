@@ -1,9 +1,16 @@
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 export default function CardComponent({ imageUri, descricao, preco, desconto, linkPage }) {
+    
+    const navigation = useNavigation();
+    
     return (
-        <View style={styles.card}>
-            <a href={linkPage}>
+        
+        <TouchableOpacity
+        onPress={() => navigation.navigate(linkPage)} // Navega para a página especificada
+        style={styles.card}
+    >
                 <Image
                     source={{ uri: imageUri }}
                     style={styles.cardImage}
@@ -17,8 +24,8 @@ export default function CardComponent({ imageUri, descricao, preco, desconto, li
                         <Text style={styles.discountText}>{desconto}</Text>
                     </View>
                 </View>
-            </a>
-        </View>
+                </TouchableOpacity>
+        
     );
 }
 
