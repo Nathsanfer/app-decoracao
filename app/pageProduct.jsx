@@ -1,6 +1,7 @@
 import { Text, View, StyleSheet, ScrollView, TouchableOpacity } from "react-native";
 import HeaderComponent from "../components/header.module.jsx";
 import CarouselProductComponent from "../components/carouselProduct.module.jsx";
+import Accordion from "../components/accordion.module.jsx";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
 const slides = [
@@ -85,6 +86,29 @@ export default function SobreScreen() {
             </View>
 
             <View style={styles.divisor}></View>
+
+            <Accordion title="Descrição do produto" 
+            content={
+                <View>
+        
+                    <Text style={{ fontSize: 14, color: "#555", marginBottom: 8 }}>
+                    O Sofá Connect Premium é a peça que faltava para transformar sua sala de estar em um oásis de conforto e elegância. Este produto excepcional, produzido pela renomada marca XFLEX SOFÁS, combina estilo contemporâneo com funcionalidade excepcional, proporcionando momentos inesquecíveis de relaxamento e entretenimento.
+                    </Text>
+
+                    <Text style={{ fontSize: 14, color: "#555", marginBottom: 8 }}>
+                    Especificações Técnicas:                    
+                    </Text>
+        
+                    <View>
+                        <Text style={{ fontSize: 14, color: "#555", marginBottom: 4 }}>• Sofá retrátil e reclinável</Text>
+                        <Text style={{ fontSize: 14, color: "#555", marginBottom: 4 }}>• Inclui porta-copos</Text>
+                        <Text style={{ fontSize: 14, color: "#555", marginBottom: 4 }}>• Entrada USB integrada</Text>
+                        <Text style={{ fontSize: 14, color: "#555", marginBottom: 4 }}>• Material: Suede</Text>
+                        <Text style={{ fontSize: 14, color: "#555", marginBottom: 4 }}>• Cor: Capuccino</Text>
+                    </View>
+                </View>
+            }
+            />
 
         </ScrollView>
     );
