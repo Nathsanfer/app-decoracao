@@ -1,4 +1,6 @@
 import { Text, View, StyleSheet, ScrollView } from "react-native";
+
+// Importe dos componentes 
 import HeaderComponent from "../components/header.module.jsx";
 
 export default function SobreScreen({}) {
@@ -12,8 +14,6 @@ export default function SobreScreen({}) {
             <Text style={styles.titleText}>MEU PERFIL</Text>
 
             </View>
-
-            
             
         </ScrollView>
     );

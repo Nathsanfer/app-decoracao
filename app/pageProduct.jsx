@@ -1,4 +1,6 @@
 import { Text, View, StyleSheet, ScrollView, TouchableOpacity } from "react-native";
+
+// Importe dos componentes 
 import HeaderComponent from "../components/header.module.jsx";
 import CarouselProductComponent from "../components/carouselProduct.module.jsx";
 import Accordion from "../components/accordion.module.jsx";
@@ -6,6 +8,7 @@ import AccordionAssessment from "../components/accordionAssessment.module.jsx";
 import SectionCards from "../components/sectionCards.module.jsx";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
+// Variável para armazenar os dados do carrossel
 const slides = [
     {
         image: { uri: 'https://static.mobly.com.br/p/XFlex-SofC3A1s-SofC3A1-Connect-Premium-22C00m-Assento-RetrC3A1til2FReclinC3A1vel-com-porta-copos-e-entrada-USB-Suede-Capuccino-5245-7690021-1.jpg' }
@@ -24,6 +27,7 @@ const slides = [
     }
 ];
 
+// Variável com dados dos produtos
 const oportunidades = [
     {
         id: 1,

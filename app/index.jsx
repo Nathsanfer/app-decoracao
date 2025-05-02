@@ -1,9 +1,11 @@
 import { ScrollView, StyleSheet } from "react-native";
+
+// Importe dos componentes 
 import HeaderComponent from "../components/header.module";
 import CarouselComponent from "../components/carousel.module";
 import SectionCards from "../components/sectionCards.module";
 
-// Array para armazenar os slides do carrossel.
+// Variável para armazenar os dados do carrossel
 const slides = [
     {
         image: { uri: 'https://decoracaobrasil.com/wp-content/uploads/2021/11/te%CC%81cnicas-para-decorar-a-casa.png' }
@@ -15,8 +17,7 @@ const slides = [
         image: { uri: 'https://img.freepik.com/fotos-premium/sala-de-estar-escandinava-moderna-com-moveis-de-design-sofa-cinza-plantas-estante-de-livros-de-bambu-e-mesa-de-madeira-parquet-de-madeira-castanho-apartamento-bonito_146105-107356.jpg?semt=ais_country_boost&w=740' }
     },
 ];
-
-// Dados dos produtos
+// Variável com dados dos produtos
 const oportunidades = [
     {
         id: 1,
@@ -34,7 +35,6 @@ const oportunidades = [
         desconto: '25% de desconto'
     }
 ];
-
 const destaques = [
     {
         id: 1,

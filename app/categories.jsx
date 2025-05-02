@@ -1,7 +1,10 @@
 import { StyleSheet, ScrollView } from "react-native";
+
+// Importe dos componentes 
 import HeaderComponent from "../components/header.module.jsx";
 import SectionCategory from "../components/sectionCategory.module.jsx";
 
+// Variáveis com as informações de cada categoria
 const salaEstar = [
         { 
             id: 1, 
@@ -46,7 +49,6 @@ const salaEstar = [
             size: 'small' 
         },
 ];
-
 const salaJantar = [
     { 
         id: 1, 
