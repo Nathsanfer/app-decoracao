@@ -39,17 +39,6 @@ export default function Layout({ }) {
                     }}
                 />
 
-                <Drawer.Screen name="contact"
-                    options={{
-                        title: "Contato",
-                        drawerLabel: "Contato",
-                        headerShown: false,
-                        headerLeft: true,
-                        drawerIcon: ({ size, color }) => (
-                            <Ionicons name="call" size={size} color={color} />
-                        ),
-                    }} />
-
                 <Drawer.Screen name="categories"
                     options={{
                         title: "Categorias",
