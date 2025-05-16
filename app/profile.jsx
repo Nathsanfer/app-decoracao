@@ -2,18 +2,27 @@ import { Text, View, StyleSheet, ScrollView } from "react-native";
 
 // Importe dos componentes 
 import HeaderComponent from "../components/header.module.jsx";
+import ProfileOptions from "../components/profileOptions.jsx";
 
 export default function SobreScreen({}) {
+
+    const profileOptions = [
+        { id: "1", icon: "assignment", label: "Suas informações" },
+        { id: "2", icon: "lock", label: "Segurança" },
+        { id: "3", icon: "credit-card", label: "Cartões" },
+        { id: "4", icon: "shopping-cart", label: "Minhas compras" },
+        { id: "5", icon: "local-offer", label: "Cupons" },
+        { id: "6", icon: "help-outline", label: "Central de ajuda" },
+        { id: "7", icon: "gavel", label: "Termos de uso" },
+        { id: "8", icon: "privacy-tip", label: "Privacidade" },
+    ];
+
     return (
         <ScrollView style={styles.container}>
 
             <HeaderComponent />
 
-            <View>
-
-            <Text style={styles.titleText}>MEU PERFIL</Text>
-
-            </View>
+            <ProfileOptions options={profileOptions} />
             
         </ScrollView>
     );

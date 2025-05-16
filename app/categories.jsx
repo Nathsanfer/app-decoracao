@@ -98,7 +98,7 @@ export default function CategoriasScreen({}) {
     return (
         <ScrollView style={styles.container}>      
 
-            <HeaderComponent />                                                                            
+            <HeaderComponent/>                                                                            
             
             <SectionCategory categories={salaEstar} title={"SALA DE ESTAR"}/>
 
