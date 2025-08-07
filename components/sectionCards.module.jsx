@@ -1,7 +1,29 @@
-import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { View, Text, Image, StyleSheet, TouchableOpacity, Alert } from 'react-native'; // Importe a API Alert aqui
 import CardComponent from './card.module.jsx';
 
 export default function SectionCards({ subtitle, title, produtos }) {
+    
+    // Função que será chamada ao clicar no botão "Ver mais"
+    const handleSeeMore = () => {
+        Alert.alert(
+            "Ver mais produtos?", // Título do alerta
+            "Você será redirecionado para a página de produtos.", // Mensagem do alerta
+            [
+                {
+                    text: "Cancelar", // Texto do botão
+                    onPress: () => console.log("Ação cancelada"), // Ação ao clicar em "Cancelar"
+                    style: "cancel" // Estilo para o botão "Cancelar" (iOS)
+                },
+                {
+                    text: "Continuar", // Texto do botão
+                    onPress: () => console.log("Navegar para a página de produtos"), // Ação ao clicar em "Continuar"
+                    style: "default" // Estilo padrão para o botão
+                }
+            ]
+        );
+    };
+
     return (
         <View style={styles.container}>
             <Text style={styles.seeMore}>{subtitle}</Text>
@@ -20,7 +42,7 @@ export default function SectionCards({ subtitle, title, produtos }) {
                 ))}
             </View>
 
-            <TouchableOpacity style={styles.verMaisButton}>
+            <TouchableOpacity style={styles.verMaisButton} onPress={handleSeeMore}> {/* Adicione a função aqui */}
                 <Text style={styles.verMaisText}>Ver mais</Text>
             </TouchableOpacity>
         </View>
@@ -32,7 +54,6 @@ const styles = StyleSheet.create({
         marginHorizontal: 15,
         marginVertical: 15,
         backgroundColor: '#f9f7f1',
-        
     },
     seeMore: {
         fontSize: 14,

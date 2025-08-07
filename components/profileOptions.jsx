@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, FlatList, TouchableOpacity } from 'react-native';
+import { Text, View, StyleSheet, FlatList, TouchableOpacity, Image } from 'react-native';
 
 // Importe da biblioteca de ícones
 import { MaterialIcons } from '@expo/vector-icons';
@@ -14,12 +14,15 @@ export default function ProfileOptions({ options }) {
     );
 
     return (
-        
+
         <View style={styles.container}>
 
             <View style={styles.profileHeader}>
                 <View style={styles.profileImage}>
-                    <img style={styles.image} src="https://avatars.githubusercontent.com/u/158168917?v=4" alt="" />
+                    <Image
+                        style={styles.image}
+                        source={{ uri: "https://avatars.githubusercontent.com/u/158168917?v=4https://www.arita.com.br/wp-content/uploads/2020/08/pessoa-expansiva-principais-caracteristicas-desta-personalidade.jpg" }} // Use 'source' com um objeto { uri: '...' }
+                    />
                 </View>
                 <Text style={styles.profileName}>Nathalia Santos Ferreira</Text>
                 <Text style={styles.profileEmail}>nathalia.santos@gmail.com</Text>
